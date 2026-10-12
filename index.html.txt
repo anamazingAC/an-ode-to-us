@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <title>An Ode to Us • Sealed with a Kiss</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" class="">
+    <style>
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          overscroll-behavior: none;
+        }
+
+        main>:first-child {
+          margin-top: 0 !important;
+        }
+
+        main>:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      @keyframes soundwave {
+
+        0%,
+        100% {
+          height: 4px;
+        }
+
+        50% {
+          height: 20px;
+        }
+      }
+
+      @keyframes soundwave-slow {
+
+        0%,
+        100% {
+          height: 6px;
+        }
+
+        50% {
+          height: 26px;
+        }
+      }
+
+      @keyframes soundwave-fast {
+
+        0%,
+        100% {
+          height: 3px;
+        }
+
+        50% {
+          height: 16px;
+        }
+      }
+
+      .animate-wave-1 {
+        animation: soundwave 1.2s ease-in-out infinite;
+      }
+
+      .animate-wave-2 {
+        animation: soundwave-slow 1.6s ease-in-out infinite;
+        animation-delay: 0.2s;
+      }
+
+      .animate-wave-3 {
+        animation: soundwave-fast 0.9s ease-in-out infinite;
+        animation-delay: 0.4s;
+      }
+
+      .animate-wave-4 {
+        animation: soundwave 1.4s ease-in-out infinite;
+        animation-delay: 0.1s;
+      }
+
+      /* Styling range inputs */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ffd9df;
+        box-shadow: 0 0 10px rgba(244, 182, 194, 0.6);
+        cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+
+      input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.3);
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ffd9df;
+        box-shadow: 0 0 10px rgba(244, 182, 194, 0.6);
+        cursor: pointer;
+        border: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#81515b",
+              "on-tertiary": "#303130",
+              "on-primary-fixed": "#330f19",
+              "surface-container-high": "#2a2a2e",
+              "on-secondary": "#531e30",
+              "surface-container": "#1f1f23",
+              "on-surface-variant": "#d5c2c4",
+              "on-tertiary-fixed-variant": "#464746",
+              "on-error-container": "#ffdad6",
+              "on-primary": "#4c242e",
+              "on-primary-container": "#74454f",
+              "surface-variant": "#353438",
+              "primary": "#ffd9df",
+              "secondary-container": "#6e3446",
+              "on-background": "#e4e1e7",
+              "secondary": "#ffb1c5",
+              "inverse-surface": "#e4e1e7",
+              "surface-container-highest": "#353438",
+              "background": "#131317",
+              "surface": "#131317",
+              "outline-variant": "#514346",
+              "surface-container-lowest": "#0e0e12",
+              "on-tertiary-fixed": "#1b1c1b",
+              "surface-bright": "#39393d",
+              "secondary-fixed": "#ffd9e1",
+              "on-surface": "#e4e1e7",
+              "tertiary-container": "#c7c6c4",
+              "on-secondary-container": "#eca0b4",
+              "surface-dim": "#131317",
+              "on-secondary-fixed": "#38091b",
+              "inverse-on-surface": "#303034",
+              "surface-tint": "#f4b6c2",
+              "primary-fixed": "#ffd9df",
+              "primary-fixed-dim": "#f4b6c2",
+              "error-container": "#93000a",
+              "surface-container-low": "#1b1b1f",
+              "on-secondary-fixed-variant": "#6e3446",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#663a44",
+              "tertiary-fixed": "#e3e2e0",
+              "tertiary-fixed-dim": "#c7c6c4",
+              "error": "#ffb4ab",
+              "outline": "#9d8d8f",
+              "secondary-fixed-dim": "#ffb1c5",
+              "on-tertiary-container": "#525251",
+              "primary-container": "#f4b6c2",
+              "tertiary": "#e3e2e0"
+            },
+            borderRadius: {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            spacing: {
+              "space-xs": "0.25rem",
+              "margin": "1.25rem",
+              "margin-desktop": "4rem",
+              "space-xl": "3rem",
+              "space-lg": "1.75rem",
+              "space-md": "1rem",
+              "space-sm": "0.5rem",
+              "gutter-desktop": "2.5rem",
+              "gutter": "1.5rem",
+              "space-2xl": "5rem"
+            },
+            fontFamily: {
+              "display-hero": ["Playfair Display"],
+              "caption": ["DM Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "label-caps": ["DM Sans"],
+              "body-md": ["DM Sans"],
+              "headline-sm": ["Playfair Display"],
+              "body-lg": ["DM Sans"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-letter": ["Playfair Display"],
+              "label-md": ["DM Sans"]
+            },
+            fontSize: {
+              "display-hero": ["64px", {
+                lineHeight: "76px",
+                letterSpacing: "-0.02em",
+                fontWeight: "400"
+              }],
+              "caption": ["12px", {
+                lineHeight: "16px",
+                letterSpacing: "0.02em",
+                fontWeight: "400"
+              }],
+              "headline-lg": ["44px", {
+                lineHeight: "54px",
+                letterSpacing: "-0.01em",
+                fontWeight: "400"
+              }],
+              "headline-md": ["28px", {
+                lineHeight: "36px",
+                letterSpacing: "0em",
+                fontWeight: "400"
+              }],
+              "headline-lg-mobile": ["30px", {
+                lineHeight: "38px",
+                letterSpacing: "0em",
+                fontWeight: "400"
+              }],
+              "label-caps": ["11px", {
+                lineHeight: "16px",
+                letterSpacing: "0.18em",
+                fontWeight: "600"
+              }],
+              "body-md": ["15px", {
+                lineHeight: "24px",
+                letterSpacing: "0.01em",
+                fontWeight: "400"
+              }],
+              "headline-sm": ["22px", {
+                lineHeight: "30px",
+                letterSpacing: "0.01em",
+                fontWeight: "500"
+              }],
+              "body-lg": ["18px", {
+                lineHeight: "28px",
+                letterSpacing: "0em",
+                fontWeight: "400"
+              }],
+              "display-hero-mobile": ["38px", {
+                lineHeight: "48px",
+                letterSpacing: "-0.01em",
+                fontWeight: "400"
+              }],
+              "body-letter": ["20px", {
+                lineHeight: "34px",
+                letterSpacing: "0.01em",
+                fontWeight: "400"
+              }],
+              "label-md": ["13px", {
+                lineHeight: "18px",
+                letterSpacing: "0.04em",
+                fontWeight: "500"
+              }]
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-surface text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- Sticky Top Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]">
+      <div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-sm shrink-0">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <a class="font-headline-sm text-headline-sm text-primary tracking-wide hover:text-secondary-fixed transition-colors flex items-center gap-space-xs" data-nav-target="home" href="#home">An Ode to Us <span class="text-secondary font-body-md">♡</span>
+          </a>
+        </div>
+        <nav class="hidden xl:flex items-center gap-space-xs" id="desktop-nav">
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg transition-all duration-300 bg-secondary-container text-on-secondary-container font-medium shadow-[0_0_15px_rgba(244,182,194,0.15)]" data-nav-target="home" href="#home">Home</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="my-letter" href="#my-letter">My Letter</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="eight-months" href="#eight-months">Eight Months, One Love</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="things-i-love" href="#things-i-love">The Things I Love</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="learning-to-love" href="#learning-to-love">Learning to Love Better</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="my-promises" href="#my-promises">My Promises to You</a>
+          <a class="nav-item font-label-caps text-label-caps uppercase px-3 py-2 rounded-lg hover:text-on-surface transition-all duration-300 text-on-surface-variant" data-nav-target="until-i-hold-you" href="#until-i-hold-you">Until I Hold You</a>
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <div class="hidden sm:flex flex-col items-end">
+            <span class="font-label-caps text-label-caps uppercase text-secondary">Dedication</span>
+            <span class="font-caption text-caption text-on-surface-variant">Month VIII • Always</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(244,182,194,0.3)]">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+          <button aria-expanded="false" aria-label="Toggle dedication navigation" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none" id="mobile-menu-toggle" type="button">
+            <span class="material-symbols-outlined text-[24px]" id="mobile-menu-icon">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Dropdown Menu -->
+      <div class="xl:hidden hidden border-t border-outline-variant/30 bg-surface-container-low/95 backdrop-blur-2xl px-6 py-4 shadow-2xl transition-all" id="mobile-menu">
+        <nav class="flex flex-col gap-2">
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider text-primary bg-secondary-container/40" data-nav-target="home" href="#home">Home</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="my-letter" href="#my-letter">My Letter</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="eight-months" href="#eight-months">Eight Months, One Love</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="things-i-love" href="#things-i-love">The Things I Love</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="learning-to-love" href="#learning-to-love">Learning to Love Better</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="my-promises" href="#my-promises">My Promises to You</a>
+          <a class="mobile-nav-item py-2 px-3 rounded-lg text-sm font-label-caps uppercase tracking-wider hover:text-primary hover:bg-surface-container-high text-on-surface-variant" data-nav-target="until-i-hold-you" href="#until-i-hold-you">Until I Hold You</a>
+        </nav>
+      </div>
+    </header>
+    <main class="w-full pt-20 pb-36 min-h-screen bg-surface">
+      <div class="flex flex-col w-full relative selection:bg-secondary-container selection:text-on-secondary-container">
+        <!-- Ambient Glow Canvas & Floating Particles Background -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+          <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[520px] rounded-full bg-primary/10 blur-[130px]"></div>
+          <div class="absolute top-[1800px] -left-48 w-[600px] h-[600px] rounded-full bg-secondary-container/20 blur-[140px]"></div>
+          <div class="absolute top-[3600px] right-0 w-[640px] h-[640px] rounded-full bg-primary/5 blur-[160px]"></div>
+          <div class="absolute top-[5200px] left-1/4 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[120px]"></div>
+        </div>
+        <!-- SECTION 1: HERO SECTION -->
+        <section class="relative min-h-[942px] flex flex-col items-center justify-center text-center px-margin lg:px-margin-desktop py-space-2xl scroll-mt-24" id="home">
+          <div class="max-w-4xl mx-auto flex flex-col items-center gap-space-lg relative z-10">
+            <!-- Top Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-[0_0_20px_rgba(244,182,194,0.14)]">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              <span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.2em]">HAPPY 8TH MONTHSARY, MY BABY ♡</span>
+            </div>
+            <!-- Main Heading -->
+            <div class="space-y-4">
+              <h1 class="font-display-hero text-display-hero text-primary tracking-tight font-normal"> An Ode to Us </h1>
+              <p class="font-headline-md text-headline-md text-on-surface-variant italic max-w-2xl mx-auto"> “Eight months of love, learning, growing, and choosing each other.” </p>
+            </div>
+            <!-- Supporting Editorial Note -->
+            <p class="font-body-md text-body-md text-outline max-w-lg mx-auto"> “A little corner of the internet, made just for you.” </p>
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
+              <a class="group relative px-7 py-3.5 rounded-full bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase tracking-widest shadow-[0_8px_30px_rgba(0,0,0,0.6),0_0_24px_rgba(244,182,194,0.22)] hover:bg-primary hover:text-on-primary transition-all duration-300 flex items-center gap-2.5" href="#my-letter">
+                <span class="">Open My Letter</span>
+                <span class="material-symbols-outlined text-[16px] group-hover:translate-y-0.5 transition-transform">mail</span>
+              </a>
+              <a class="px-7 py-3.5 rounded-full bg-surface-container/70 backdrop-blur-md text-on-surface hover:text-primary hover:bg-surface-container-high transition-all duration-300 font-label-caps text-label-caps uppercase tracking-widest shadow-sm flex items-center gap-2" href="#eight-months">
+                <span class="">Our Eight Months</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+              </a>
+            </div>
+            <!-- Milestone Stat Pill -->
+            <div class="grid grid-cols-3 gap-6 sm:gap-12 mt-space-xl pt-space-lg px-8 py-4 rounded-2xl bg-surface-container-low/60 backdrop-blur-md shadow-inner">
+              <div class="flex flex-col items-center">
+                <span class="font-headline-md text-headline-md text-primary">243+</span>
+                <span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Days Together</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="font-headline-md text-headline-md text-secondary">08</span>
+                <span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Chapters Written</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="font-headline-md text-headline-md text-primary">Always</span>
+                <span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Choosing You</span>
+              </div>
+            </div>
+            <!-- Gentle Scroll Indicator -->
+            <a class="inline-flex flex-col items-center gap-2 mt-8 text-on-surface-variant hover:text-primary transition-colors" href="#music-suite">
+              <span class="font-caption text-caption tracking-widest uppercase">Scroll Down</span>
+              <span class="material-symbols-outlined text-[20px] animate-bounce">keyboard_arrow_down</span>
+            </a>
+          </div>
+        </section>
+        <!-- SECTION 2: MUSIC SUITE SECTION & DEDICATED PLAYER (HTML5 AUDIO PLAYER) -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-xl scroll-mt-24" id="music-suite">
+          <div class="max-w-3xl mx-auto rounded-2xl bg-[#242428] backdrop-blur-xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.7),0_0_24px_rgba(244,182,194,0.14)] border border-outline-variant/30 relative overflow-hidden group">
+            <!-- Ambient glowing backdrop aura -->
+            <div class="absolute -top-24 -right-24 w-60 h-60 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+            <div class="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-secondary-container/20 blur-[120px] pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col items-center text-center gap-6">
+              <!-- Header Badge -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-high/90 border border-primary/20 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">OUR SOUNDTRACK • 8TH MONTHSARY</span>
+              </div>
+              <!-- Song Title, Artist & Romantic Caption -->
+              <div class="space-y-1.5">
+                <h3 class="font-headline-md text-headline-md text-primary font-normal tracking-wide"> Turning Page </h3>
+                <p class="font-headline-sm text-headline-sm text-secondary-fixed-dim/90 font-normal"> Sleeping at Last </p>
+                <p class="font-body-md text-body-md text-on-surface-variant italic pt-1"> “Press play, Baby, and let this song speak for my heart. ♡” </p>
+              </div>
+              <!-- Official Spotify Track Embed -->
+              <div class="w-full max-w-2xl mx-auto shadow-2xl rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,182,194,0.2)]">
+                <iframe style="border-radius:16px; border:1px solid rgba(244, 182, 194, 0.25); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" src="https://open.spotify.com/embed/track/2kfGoV9a5dbSKCNmUWH2ZF?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <!-- Subtitle Quote -->
+              <div class="flex items-center gap-2 text-secondary/80 text-caption font-caption pt-1">
+                <span class="material-symbols-outlined text-[16px] text-primary">favorite</span>
+                <p class="italic">“I’ve waited a hundred years, but I’d wait a million more for you...” ♡</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 3: MY LETTER SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl scroll-mt-24" id="my-letter">
+          <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-space-lg space-y-2">
+              <div class="inline-flex items-center gap-2">
+                <span class="w-8 h-[1px] bg-secondary/60"></span>
+                <span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.2em]">Epistolary Keepsake</span>
+                <span class="w-8 h-[1px] bg-secondary/60"></span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">A Letter From My Heart</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “For my Baby, the person I continue choosing.” </p>
+            </div>
+            <!-- Wax Sealed Envelope Container -->
+            <div class="w-full relative">
+              <!-- Sealed Envelope Teaser / Cover Card -->
+              <div class="w-full bg-surface-container rounded-2xl p-8 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col items-center text-center transition-all duration-500 relative overflow-hidden" id="envelope-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
+                <!-- Monogrammed Wax Heart Seal -->
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-secondary-container via-surface-tint to-primary text-on-primary flex items-center justify-center shadow-[0_0_30px_rgba(244,182,194,0.45)] mb-6 transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="toggleLetter()">
+                  <span class="material-symbols-outlined text-[36px]">favorite</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Month VIII • Strictly For You</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6"> Folded with deliberate devotion. Stamped with eight months of shared memories, whispered nights, and honest promises. </p>
+                <button class="px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest shadow-[0_0_20px_rgba(244,182,194,0.3)] hover:bg-secondary-fixed transition-all flex items-center gap-2" onclick="toggleLetter()" type="button">
+                  <span class="">Unseal &amp; Open My Letter</span>
+                  <span class="material-symbols-outlined text-[18px]">drafts</span>
+                </button>
+              </div>
+              <!-- Full Luxury Stationery Letter (Expanded Content) -->
+              <article class="w-full bg-[#18181c]/95 border border-primary/20 backdrop-blur-2xl rounded-2xl p-8 sm:p-14 lg:p-20 shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(244,182,194,0.12)] transition-all duration-700 mt-6 relative overflow-hidden" id="letter-content" style="box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 60px -15px, rgba(244, 182, 194, 0.04) 0px 0px 40px inset;">
+                <!-- Delicate Filigree & Ambient Glow Background Accents -->
+                <div class="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-secondary-container/20 blur-[120px] pointer-events-none"></div>
+                <div class="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+                <!-- Inner stationery border frame decoration -->
+                <div class="absolute inset-4 sm:inset-6 rounded-xl pointer-events-none border border-outline-variant/30 opacity-70"></div>
+                <!-- Letter Meta Header -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-8 mb-10 border-b border-outline-variant/30 gap-4 relative z-10">
+                  <div class="space-y-1.5">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                      <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.25em] font-semibold">Archival Edition • Month VIII</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary font-normal tracking-wide">To My Baby — Happy 8th Monthsary 💗</h3>
+                  </div>
+                  <div class="text-left sm:text-right">
+                    <span class="font-caption text-caption text-secondary/80 tracking-widest block uppercase font-medium">NAGA x TARLAC</span>
+                    <span class="font-caption text-caption text-outline font-mono tracking-wider">SEALED FOR ALWAYS</span>
+                  </div>
+                </div>
+                <!-- Verbatim Full Letter Text with Cormorant Garamond Editorial Serif & Soft Platinum Ivory High Contrast -->
+                <div class="space-y-7 leading-[1.95] max-w-3xl mx-auto relative z-10 text-[#FAF7F8] text-[19px] sm:text-[20px] tracking-[0.015em] font-normal" style="font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;">
+                  <p class="font-medium text-primary text-[22px] tracking-wide"> To My Baby — Happy 8th Monthsary 💗 </p>
+                  <p class=""> Eight months, Baby, since the story of the two of us began, </p>
+                  <p class=""> Eight months of love, laughter, affection, and dreams that we continue to build together whenever we can. </p>
+                  <p class=""> Not every day we have been through has been easy, </p>
+                  <p class=""> But through every challenge, we have come to know each other more deeply and understand what true love really means. </p>
+                  <p class=""> I know our story is not always filled with happiness, </p>
+                  <p class=""> There are moments when emotions speak louder than our ability to understand each other's hearts. </p>
+                  <p class=""> There are misunderstandings, little arguments, and moments when we need to take a breath, </p>
+                  <p class=""> But through it all, I am grateful that we continue to choose to work things out together. </p>
+                  <p class=""> Baby, I have learned that loving each other is not enough on its own, </p>
+                  <p class=""> We must also learn to listen, understand, and make room for each other's feelings. </p>
+                  <p class=""> I never want every misunderstanding to become a reason for us to grow apart, </p>
+                  <p class=""> I want us to learn to be more careful with our words and more loving in the way we treat each other. </p>
+                  <p class=""> I cannot promise that I will be a perfect partner every single time, </p>
+                  <p class=""> But I promise to keep working on myself and becoming better for our relationship. </p>
+                  <p class=""> I want you to feel that you never have to carry everything that weighs on your heart alone, </p>
+                  <p class=""> Because I want to be your safe place and your teammate, not another source of worry in your life. </p>
+                  <p class=""> I know we both have our own battles to face, </p>
+                  <p class=""> There are days when we are tired, days when we are quiet, and days when we do not know how to start a conversation. </p>
+                  <p class=""> But I hope that even on those days, we never forget that we both have hearts that deserve to be understood, </p>
+                  <p class=""> And instead of letting pride take over, we choose to talk, work things out, and find our way back to each other. </p>
+                  <p class=""> If our relationship were like a long-term subscription, </p>
+                  <p class=""> We have already spent eight months building our own story, so we no longer need a trial version. </p>
+                  <p class=""> There may be updates we need to make to ourselves, bugs we need to fix, and features we still need to learn, </p>
+                  <p class=""> But what matters is that we are both willing to grow so that our relationship can become even better. </p>
+                  <p class=""> There is no such thing as an automatically perfect relationship, and no magic that makes everything okay all the time, </p>
+                  <p class=""> But there are two people who can learn to love each other better despite the pain and the weight they sometimes carry. </p>
+                  <p class=""> And with every new month that comes, I want us to understand more about each other, </p>
+                  <p class=""> Not just how to make each other happy, but also how to take care of our love when challenges come our way. </p>
+                  <p class=""> Baby, I want to see you happy, healthy, and slowly achieving your dreams, </p>
+                  <p class=""> I want to support you in the things you want to do and be there during the times when you need to believe in yourself again. </p>
+                  <p class=""> I never want you to lose yourself while loving me, </p>
+                  <p class=""> Because I want us to grow together while still being free to be who we truly are. </p>
+                  <p class=""> We have only been together for eight months, but we have already learned so much, </p>
+                  <p class=""> And I know there are still so many more days, stories, and dreams waiting for the two of us in the future. </p>
+                  <p class=""> I do not know exactly what all our tomorrows will look like, </p>
+                  <p class=""> But I know I want to face them with you as we continue choosing each other and learning to understand one another. </p>
+                  <p class="font-headline-sm text-headline-sm text-primary pt-4 font-normal"> Happy 8th monthsary, my Baby. ❤️ </p>
+                  <p class=""> Thank you for becoming a part of my life. Thank you for the affection, the laughter, and the conversations that turn even the simplest things into something special just because you are the person I am talking to. And thank you, too, for the challenges that teach us how to love each other better. </p>
+                  <p class=""> If there is one thing I want us to carry into the months ahead, it is the promise that we will not simply love each other, but that we will also learn how to love each other better. </p>
+                  <p class=""> With so many things in life that could change, I hope we remain willing to talk, listen, understand, and work through the things we can still make right. </p>
+                  <p class=""> I have been choosing you for eight months now, Baby, and not simply because I love you, but because I want us to keep building a love that we will both take care of. </p>
+                  <p class=""> You are still my Baby, my teammate, and the person I want to spend many more months and years with. </p>
+                  <p class="font-headline-sm text-headline-sm text-primary font-normal"> I love you, my Baby. Happy 8th monthsary to us. 💗 </p>
+                  <p class="italic text-secondary pt-2 text-[21px]"> It's still you on the days when loving each other comes easily, and especially on the days when we need to learn how to love each other better. ❤️ </p>
+                </div>
+                <!-- Letter Signoff & Interactive CTA -->
+                <div class="mt-12 pt-8 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
+                  <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-sm">
+                      <span class="material-symbols-outlined text-[20px]">favorite</span>
+                    </span>
+                    <div>
+                      <p class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Sealed with a Kiss ♡</p>
+                      <p class="font-caption text-caption text-on-surface-variant">Yours, yesterday, today, and always</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <button class="text-caption font-caption uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" onclick="toggleLetter()" type="button"> Fold Letter </button>
+                    <a class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-fixed transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(244,182,194,0.25)]" href="#eight-months">
+                      <span class="">Continue Our Story</span>
+                      <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 4: EIGHT MONTHS, ONE LOVE SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl bg-surface-container-lowest scroll-mt-24" id="eight-months">
+          <div class="max-w-5xl mx-auto flex flex-col gap-space-xl">
+            <!-- Section Title & Subtitle -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Milestone Retrospective</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">Eight Months With You</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “Eight months of love, laughter, lessons, and choosing each other.” </p>
+            </div>
+            <!-- Large Typography Hero Display Banner -->
+            <div class="relative overflow-hidden rounded-2xl bg-surface-container p-8 sm:p-14 shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
+              <div class="flex items-baseline gap-4">
+                <span class="font-display-hero text-[110px] leading-none text-primary font-normal">08</span>
+                <div class="flex flex-col">
+                  <span class="font-label-caps text-label-caps uppercase tracking-[0.3em] text-secondary">MONTHS OF US</span>
+                  <span class="font-caption text-caption text-on-surface-variant">A constellation of small, unshakeable choices</span>
+                </div>
+              </div>
+              <!-- Verbatim Personal Message Card -->
+              <div class="max-w-md bg-surface-container-high/80 backdrop-blur-md p-6 rounded-xl shadow-md">
+                <p class="font-body-md text-body-md text-on-surface leading-relaxed italic"> “Eight months of love, laughter, lessons, and choosing each other. Every single day has been an opportunity to understand your soul a little deeper.” </p>
+              </div>
+            </div>
+            <!-- 4 Milestone Statements Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Card 1 -->
+              <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-md flex items-start gap-5">
+                <span class="font-headline-md text-headline-md text-secondary/80 font-mono">01</span>
+                <div class="space-y-1.5">
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface">Unwavering Love</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Eight months of loving each other. Choosing affection across long days, through every good morning and late-night reassurance. </p>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-md flex items-start gap-5">
+                <span class="font-headline-md text-headline-md text-primary/80 font-mono">02</span>
+                <div class="space-y-1.5">
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface">Shared Joy &amp; Intimacy</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Eight months of laughter, affection, and conversations that turn even the simplest everyday moments into something holy and memorable. </p>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-md flex items-start gap-5">
+                <span class="font-headline-md text-headline-md text-secondary/80 font-mono">03</span>
+                <div class="space-y-1.5">
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface">Patience Through Fire</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Eight months of learning through challenges and misunderstandings, discovering that disagreements don't break us—they teach us how to care. </p>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-md flex items-start gap-5">
+                <span class="font-headline-md text-headline-md text-primary/80 font-mono">04</span>
+                <div class="space-y-1.5">
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface">Mutual Devotion</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Eight months of choosing to understand each other and keep growing together, hand in hand, with gentle hearts and honest intentions. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 5: THE THINGS I LOVE SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl scroll-mt-24" id="things-i-love">
+          <div class="max-w-6xl mx-auto flex flex-col gap-space-xl">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">A Gentle Inventory</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">The Little Things I Adore About You</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “It is never just one thing. It is all the little things that make you, you.” </p>
+            </div>
+            <!-- 6 Responsive Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- 1: Your Smile -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Smile</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> The gentle way your face lights up, bringing immediate warmth to my universe no matter how heavy or tiring my day was before seeing you. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">Always Captivating</span>
+              </div>
+              <!-- 2: Your Laugh -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">music_cast</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Laugh</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> That genuine, uninhibited sound that immediately melts away distance, reminding me why laughing with you is my absolute favorite pastime. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">My Favorite Melody</span>
+              </div>
+              <!-- 3: Your Heart -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Heart</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Your genuine sincerity, your sensitivity, and the quiet tenderness you hold even when the world around you demands harshness. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">Tender &amp; True</span>
+              </div>
+              <!-- 4: Your Presence -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">spa</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Presence</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Even through glass and across thousands of miles, simply knowing you are there calms my thoughts and anchors my restless mind. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">My Quiet Anchor</span>
+              </div>
+              <!-- 5: Your Effort -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">handshake</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Effort</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> The continuous willingness to show up, to communicate even when uncomfortable, and to keep choosing us through busy schedules. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">Every Single Day</span>
+              </div>
+              <!-- 6: Your Dreams -->
+              <div class="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md flex flex-col justify-between group">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">hotel_class</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Your Dreams</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> The beautiful ambitions you nurture. Watching you reach for what you desire makes me honor and admire the person you are becoming. </p>
+                </div>
+                <span class="font-caption text-caption text-secondary/70 uppercase tracking-widest mt-6">In Your Corner</span>
+              </div>
+            </div>
+            <!-- Verbatim Closing Message -->
+            <div class="p-8 rounded-2xl bg-surface-container-low text-center max-w-3xl mx-auto shadow-inner">
+              <p class="font-headline-sm text-headline-sm text-on-surface italic leading-relaxed"> “Thank you for being you, for letting me love you, and for making these eight months feel like the most meaningful chapter of my life.” </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 6: LEARNING TO LOVE BETTER SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl bg-surface-container-lowest scroll-mt-24" id="learning-to-love">
+          <div class="max-w-5xl mx-auto flex flex-col gap-space-xl">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Maturing In Devotion</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">A Love That Keeps Growing</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “Loving each other is beautiful. Learning how to love each other better is part of the journey.” </p>
+            </div>
+            <!-- 4 Pillars Grid with Interactive Focus -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Pillar 1 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary font-caption">1</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Understanding each other</h3>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Loving each other is not enough on its own. We must continually practice the art of deep listening, making safe space for vulnerability, and honoring each other’s unspoken emotional weights. </p>
+              </div>
+              <!-- Pillar 2 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary font-caption">2</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Choosing Communication Over Pride</h3>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> When friction arrives, never letting wounded pride speak louder than our bond. Stepping back, taking a breath, speaking with gentleness, and intentionally finding our way back to each other’s arms. </p>
+              </div>
+              <!-- Pillar 3 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary font-caption">3</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Growing Without Losing Ourselves</h3>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Supporting individual growth while strengthening the collective pair. You never have to sacrifice your passions, voice, or identity to be cherished—we blossom as two whole beings together. </p>
+              </div>
+              <!-- Pillar 4: Cute Subscription Analogy -->
+              <div class="p-8 rounded-2xl bg-surface-container-high shadow-lg flex flex-col gap-4 relative overflow-hidden">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-caption">4</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Updating Our Love</h3>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-caption text-caption uppercase tracking-wider">Lifetime Tier</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-lowest/80 mt-1 space-y-2">
+                  <p class="font-label-caps text-label-caps text-secondary uppercase">Eight Months. No More Trial Version. ♡</p>
+                  <p class="font-body-md text-body-md text-on-surface leading-relaxed"> If our relationship were like a long-term subscription, we have already spent eight months building our story, so we no longer need a trial version. There may be updates we need to make to ourselves, bugs we need to fix, and features we still need to learn, but what matters is that we are both willing to grow so our relationship becomes even better. </p>
+                </div>
+              </div>
+            </div>
+            <!-- Ending Quote Banner -->
+            <div class="mt-4 p-8 rounded-2xl bg-surface-container-low text-center max-w-3xl mx-auto shadow-md">
+              <p class="font-headline-sm text-headline-sm text-primary italic leading-relaxed"> “We do not need a perfect relationship. We need the willingness to understand each other and keep learning how to love better.” </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 7: MY PROMISES TO YOU SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl scroll-mt-24" id="my-promises">
+          <div class="max-w-5xl mx-auto flex flex-col gap-space-xl">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Vows For Tomorrow</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">Promises From My Heart</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “Not promises of perfection, but promises of effort, understanding, and growth.” </p>
+            </div>
+            <!-- 5 Promises Cards Stack -->
+            <div class="flex flex-col gap-5">
+              <!-- Promise 1 -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex items-start gap-6">
+                <span class="font-headline-lg text-headline-lg text-secondary font-mono shrink-0">01</span>
+                <div class="space-y-1">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">I Promise to Keep Improving</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> I cannot promise that I will be a perfect partner every single time, but I promise to keep working on myself and becoming better for our relationship. </p>
+                </div>
+              </div>
+              <!-- Promise 2 -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex items-start gap-6">
+                <span class="font-headline-lg text-headline-lg text-primary font-mono shrink-0">02</span>
+                <div class="space-y-1">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">I Promise to Listen and Understand</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> To prioritize understanding your feelings over defending my ego, listening quietly when your spirit is weary and offering comfort rather than debate. </p>
+                </div>
+              </div>
+              <!-- Promise 3 -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex items-start gap-6">
+                <span class="font-headline-lg text-headline-lg text-secondary font-mono shrink-0">03</span>
+                <div class="space-y-1">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">I Promise to Be Your Teammate</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> I want you to feel that you never have to carry everything that weighs on your heart alone, because I want to be your safe place and your teammate, not another source of worry in your life. </p>
+                </div>
+              </div>
+              <!-- Promise 4 -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex items-start gap-6">
+                <span class="font-headline-lg text-headline-lg text-primary font-mono shrink-0">04</span>
+                <div class="space-y-1">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">I Promise to Support Your Dreams</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Baby, I want to see you happy, healthy, and slowly achieving your dreams. I want to support you in the things you want to do and be there during the times when you need to believe in yourself again. </p>
+                </div>
+              </div>
+              <!-- Promise 5 -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex items-start gap-6">
+                <span class="font-headline-lg text-headline-lg text-secondary font-mono shrink-0">05</span>
+                <div class="space-y-1">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">I Promise to Keep Choosing Growth</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> With so many things in life that could change, I hope we remain willing to talk, listen, understand, and work through the things we can still make right. </p>
+                </div>
+              </div>
+            </div>
+            <!-- Sincere Note Beneath -->
+            <div class="p-8 rounded-2xl bg-surface-container-low text-center max-w-3xl mx-auto shadow-inner">
+              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed"> “These promises are not written lightly. They are the compass I hold every time I think of our tomorrow.” </p>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 8: A LITTLE PIECE OF YOU (Photo Placeholder & Custom Uploader) -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl bg-surface-container-lowest scroll-mt-24">
+          <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-space-lg">
+            <!-- Section Header -->
+            <div class="space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">A Keepsake Artifact</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">A Little Piece of You</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “Even from miles away, you have a place in every little corner of my heart.” </p>
+            </div>
+            <!-- Exactly ONE 4:5 Aspect Ratio Photo Card Container -->
+            <div class="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] rounded-2xl p-3 bg-surface-container-high shadow-[0_20px_50px_rgba(0,0,0,0.7),0_0_30px_rgba(244,182,194,0.18)] group">
+              <div class="w-full h-full rounded-xl overflow-hidden relative bg-surface-container-lowest flex items-center justify-center">
+                <!-- Image Display with Placeholder Fallback -->
+                <img alt="My partner" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An intimate editorial portrait of a cherished partner during golden hour, soft backlight illuminating dark silky hair, serene gentle smile, warm natural tones, soft focus background, quiet romance aesthetic, 35mm film grain style" id="partner-photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuoPSEuHxvotbEMmI3RI2P4CMn2h-0h4GagZ1G2SD431v2vOdXaIU5jH4J9Dc5VYZZBUE3SSeSNyZ6eKCyj7kdZ8KoUQEUpMMAN0PIR9SuI3LqEMrvc-sY_mfwFIKYALfmbx94cO1F1Mz0nLzlZF7EFXmsSoPgk4t7eTyH4GKL1P2WUQzGuOq2OrvLFFxm9YbymoO2xkf2ZvqCouLCkbpB1_TJCvAgTOHtH33Sr8ykCbkPkFMHDfRynB-zv1X7ALhsJE">
+                <!-- Dark Frosted Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                <!-- Bottom Floating Polaroid Label inside the photo -->
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-left pointer-events-none">
+                  <div>
+                    <p class="font-label-caps text-label-caps uppercase text-secondary">My Entire World</p>
+                    <p class="font-headline-sm text-[18px] text-primary">Forever My Favorite View</p>
+                  </div>
+                  <span class="material-symbols-outlined text-primary text-[24px]">favorite</span>
+                </div>
+                <!-- Quick Replace Overlay Button (Client-side interactive) -->
+                <label class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-surface-container-high/90 backdrop-blur-md text-on-surface font-caption text-caption cursor-pointer hover:bg-primary hover:text-on-primary transition-all shadow-md flex items-center gap-1.5" for="photo-file-input">
+                  <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+                  <span class="">Replace Photo</span>
+                </label>
+                <input accept="image/*" class="hidden" id="photo-file-input" type="file">
+              </div>
+            </div>
+            <!-- Caption -->
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-lg italic"> “Until we have a picture together, this little space holds a piece of the person who means so much to me.” </p>
+          </div>
+        </section>
+        <!-- SECTION 9: UNTIL I HOLD YOU SECTION -->
+        <section class="w-full px-margin lg:px-margin-desktop py-space-2xl scroll-mt-24" id="until-i-hold-you">
+          <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-space-xl">
+            <!-- Section Header -->
+            <div class="space-y-2">
+              <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Looking Toward Tomorrow</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary font-normal">Until I Can Hold You</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant italic"> “For now, we love across the distance. Someday, I hope we can hold each other close.” </p>
+            </div>
+            <!-- 3 Passages Bento Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left w-full">
+              <!-- Passage 1 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Part I</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Until We Meet</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Every call, every video screen, and every countdown brings us closer to the day distance will no longer be something we have to navigate. </p>
+                </div>
+                <div class="pt-6">
+                  <span class="w-6 h-[1px] bg-secondary/40 block"></span>
+                </div>
+              </div>
+              <!-- Passage 2 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Part II</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">More Months, More Years</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> We have only been together for eight months, but I know there are still so many more days, stories, and dreams waiting for the two of us. </p>
+                </div>
+                <div class="pt-6">
+                  <span class="w-6 h-[1px] bg-primary/40 block"></span>
+                </div>
+              </div>
+              <!-- Passage 3 -->
+              <div class="p-8 rounded-2xl bg-surface-container shadow-md flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Part III</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Still You</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> I have been choosing you for eight months now, Baby, and not simply because I love you, but because I want us to keep building a love that we will both take care of. </p>
+                </div>
+                <div class="pt-6">
+                  <span class="w-6 h-[1px] bg-secondary/40 block"></span>
+                </div>
+              </div>
+            </div>
+            <!-- Climax Quote Banner -->
+            <div class="w-full p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-secondary-container/40 via-surface-container-high to-secondary-container/40 shadow-[0_16px_50px_rgba(0,0,0,0.6)]">
+              <p class="font-headline-md text-headline-md text-primary italic leading-relaxed"> “It's still you on the days when loving each other comes easily, and especially on the days when we need to learn how to love each other better.” ❤️ </p>
+            </div>
+            <!-- Intimate Sign-Offs & Signature Block -->
+            <div class="flex flex-col items-center gap-4 pt-4">
+              <h3 class="font-headline-md text-headline-md text-primary">Happy 8th Monthsary, My Baby. ❤️</h3>
+              <p class="font-headline-sm text-headline-sm text-secondary">I Love You, Baby Ko. 💗</p>
+              <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-[0_0_24px_rgba(244,182,194,0.3)] my-2">
+                <span class="material-symbols-outlined text-[32px] animate-pulse">favorite</span>
+              </div>
+              <p class="font-label-caps text-label-caps uppercase tracking-[0.25em] text-on-surface-variant"> An Ode to Us • Sealed with a Kiss </p>
+              <!-- Read Letter Again CTA -->
+              <a class="mt-4 px-8 py-3.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-all font-label-caps text-label-caps uppercase tracking-widest shadow-md flex items-center gap-2" href="#my-letter">
+                <span class="material-symbols-outlined text-[18px]">drafts</span>
+                <span class="">Read My Letter Again</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Bottom Floating Mini Player with Synchronized Real Audio -->
+    <aside class="fixed bottom-6 inset-x-4 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-[680px] z-40 bg-surface-container-high/90 backdrop-blur-2xl rounded-full p-2.5 px-5 shadow-[0_12px_44px_-10px_rgba(0,0,0,0.8),0_0_24px_rgba(244,182,194,0.12)] border border-outline-variant/30">
+      <div class="flex items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-sm min-w-0">
+          <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0 shadow-[inset_0_0_10px_rgba(244,182,194,0.2)]">
+            <span class="material-symbols-outlined text-on-secondary-container text-[20px] animate-pulse">favorite</span>
+          </div>
+          <div class="min-w-0 pr-space-xs">
+            <div class="flex items-center gap-2">
+              <p class="font-label-md text-label-md text-on-surface truncate">Turning Page</p>
+              <span class="font-caption text-caption text-secondary/80 shrink-0 hidden sm:inline">— Sleeping at Last • Playing on Spotify</span>
+            </div>
+            <p class="font-caption text-caption text-on-surface-variant truncate italic">"I’ve waited a hundred years, but I’d wait a million more for you"</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md shrink-0">
+          <div class="hidden sm:flex items-center gap-1.5 h-6 px-2">
+            <span class="w-1 bg-secondary rounded-full h-2 animate-pulse"></span>
+            <span class="w-1 bg-primary rounded-full h-3.5 animate-pulse"></span>
+            <span class="w-1 bg-secondary-fixed rounded-full h-2.5 animate-pulse"></span>
+            <span class="w-1 bg-primary-container rounded-full h-4 animate-pulse"></span>
+          </div>
+          <a href="#music-suite" class="px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-secondary-fixed transition-colors font-label-caps text-label-caps uppercase tracking-wider shadow-[0_0_14px_rgba(244,182,194,0.35)] flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">music_note</span>
+            <span class="hidden sm:inline">Spotify Player</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <footer class="w-full bg-surface-container-lowest py-space-xl">
+      <div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop text-center flex flex-col items-center gap-space-sm">
+        <div class="flex items-center gap-2">
+          <span class="w-6 h-[1px] bg-outline-variant"></span>
+          <span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Eighth Monthsary Archive</span>
+          <span class="w-6 h-[1px] bg-outline-variant"></span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Across every time zone, milestone, and quiet evening whisper. Sealed forever with love.</p>
+        <p class="font-caption text-caption text-outline">Crafted with bespoke devotion • Rome &amp; Manila • All My Love</p>
+      </div>
+    </footer>
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+      // 1. Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          const isExpanded = !mobileMenu.classList.contains('hidden');
+          if (isExpanded) {
+            mobileMenu.classList.add('hidden');
+            if (mobileIcon) mobileIcon.textContent = 'menu';
+          } else {
+            mobileMenu.classList.remove('hidden');
+            if (mobileIcon) mobileIcon.textContent = 'close';
+          }
+        });
+      }
+      // Close mobile menu upon clicking any mobile nav link
+      document.querySelectorAll('.mobile-nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+          if (mobileMenu) mobileMenu.classList.add('hidden');
+          if (mobileIcon) mobileIcon.textContent = 'menu';
+        });
+      });
+      // 2. Interactive Digital Letter Toggle
+      function toggleLetter() {
+        const letter = document.getElementById('letter-content');
+        const cover = document.getElementById('envelope-cover');
+        if (!letter || !cover) return;
+        if (letter.classList.contains('hidden')) {
+          letter.classList.remove('hidden');
+          letter.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        } else {
+          letter.classList.add('hidden');
+          cover.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
+      }
+      // 3. Client-Side Image Picker for Photo Placeholder
+      const photoInput = document.getElementById('photo-file-input');
+      const partnerPhoto = document.getElementById('partner-photo');
+      if (photoInput && partnerPhoto) {
+        photoInput.addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+              partnerPhoto.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+      // 4. Smooth Scrolling for all internal anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, targetId);
+          }
+        });
+      });
+      // 5. Active Navigation Scroll Spy using IntersectionObserver
+      const navItems = document.querySelectorAll('#desktop-nav .nav-item, #mobile-menu .mobile-nav-item');
+      const monitoredSectionIds = ['home', 'my-letter', 'eight-months', 'things-i-love', 'learning-to-love', 'my-promises', 'until-i-hold-you'];
+      const observerSections = monitoredSectionIds.map(id => document.getElementById(id)).filter(Boolean);
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navItems.forEach(item => {
+              const target = item.getAttribute('data-nav-target');
+              if (target === id) {
+                if (item.classList.contains('mobile-nav-item')) {
+                  item.classList.add('text-primary', 'bg-secondary-container/40');
+                  item.classList.remove('text-on-surface-variant');
+                } else {
+                  item.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-medium', 'shadow-[0_0_15px_rgba(244,182,194,0.15)]');
+                  item.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+                }
+              } else {
+                if (item.classList.contains('mobile-nav-item')) {
+                  item.classList.remove('text-primary', 'bg-secondary-container/40');
+                  item.classList.add('text-on-surface-variant');
+                } else {
+                  item.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-medium', 'shadow-[0_0_15px_rgba(244,182,194,0.15)]');
+                  item.classList.add('text-on-surface-variant');
+                }
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0.1
+      });
+      observerSections.forEach(sec => spyObserver.observe(sec));
+      // 6. Audio Player Controller for Local MP3 (Unified with Bottom Floating Bar)
+      (function initLoveAudio() {
+        const audio = document.getElementById('loveAudio');
+        if (!audio) return;
+        const playBtn = document.getElementById('player-play-btn');
+        const playIcon = document.getElementById('player-play-icon');
+        const playText = document.getElementById('player-play-text');
+        const progressBar = document.getElementById('progressBar');
+        const curTimeDisplay = document.getElementById('currentTimeDisplay');
+        const durTimeDisplay = document.getElementById('durationDisplay');
+        const muteBtn = document.getElementById('player-mute-btn');
+        const muteIcon = document.getElementById('player-mute-icon');
+        const volSlider = document.getElementById('player-volume-slider');
+        const errorBanner = document.getElementById('audio-error-banner');
+        const cardWaveBars = document.querySelectorAll('.card-wave');
+        const bottomPlayBtn = document.getElementById('bottom-play-btn');
+        const bottomPlayIcon = document.getElementById('bottom-play-icon');
+        const bottomTimeDisplay = document.getElementById('bottom-time-display');
+        const bottomWaveBars = document.querySelectorAll('.bottom-wave');
+        const bottomVolFill = document.getElementById('bottom-vol-fill');
+
+        function formatTime(s) {
+          if (isNaN(s) || s < 0) return '00:00';
+          const m = Math.floor(s / 60);
+          const sec = Math.floor(s % 60);
+          return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+        }
+
+        function setVisualizerState(isPlaying) {
+          if (playIcon) playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+          if (playText) playText.textContent = isPlaying ? 'Pause Song' : 'Play Song';
+          if (bottomPlayIcon) bottomPlayIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+          cardWaveBars.forEach((bar, idx) => {
+            if (isPlaying) {
+              bar.classList.add(idx % 2 === 0 ? 'animate-wave-1' : 'animate-wave-2');
+            } else {
+              bar.classList.remove('animate-wave-1', 'animate-wave-2', 'animate-wave-3', 'animate-wave-4');
+            }
+          });
+          bottomWaveBars.forEach((bar, idx) => {
+            if (isPlaying) {
+              bar.classList.add(idx % 2 === 0 ? 'animate-wave-1' : 'animate-wave-2');
+            } else {
+              bar.classList.remove('animate-wave-1', 'animate-wave-2', 'animate-wave-3', 'animate-wave-4');
+            }
+          });
+        }
+        async function togglePlayback() {
+          if (audio.paused) {
+            try {
+              await audio.play();
+              setVisualizerState(true);
+            } catch (err) {
+              console.warn('Playback error or blocked by browser:', err);
+              setVisualizerState(false);
+              if (errorBanner) errorBanner.classList.remove('hidden');
+            }
+          } else {
+            audio.pause();
+            setVisualizerState(false);
+          }
+        }
+        if (playBtn) playBtn.addEventListener('click', togglePlayback);
+        if (bottomPlayBtn) bottomPlayBtn.addEventListener('click', togglePlayback);
+        audio.addEventListener('play', () => {
+          setVisualizerState(true);
+          if (errorBanner) errorBanner.classList.add('hidden');
+        });
+        audio.addEventListener('pause', () => setVisualizerState(false));
+        audio.addEventListener('ended', () => {
+          setVisualizerState(false);
+          if (progressBar) progressBar.value = 0;
+        });
+        audio.addEventListener('timeupdate', () => {
+          const cur = audio.currentTime;
+          const dur = audio.duration || 255;
+          const pct = (cur / dur) * 100;
+          if (progressBar && !progressBar.matches(':active')) {
+            progressBar.value = pct;
+          }
+          if (curTimeDisplay) curTimeDisplay.textContent = formatTime(cur);
+          if (durTimeDisplay && !isNaN(audio.duration)) durTimeDisplay.textContent = formatTime(audio.duration);
+          if (bottomTimeDisplay) bottomTimeDisplay.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
+        });
+        audio.addEventListener('loadedmetadata', () => {
+          if (durTimeDisplay && audio.duration) durTimeDisplay.textContent = formatTime(audio.duration);
+          if (bottomTimeDisplay && audio.duration) bottomTimeDisplay.textContent = `00:00 / ${formatTime(audio.duration)}`;
+        });
+        audio.addEventListener('error', () => {
+          setVisualizerState(false);
+          if (errorBanner) errorBanner.classList.remove('hidden');
+        });
+        // Seeking scrub
+        if (progressBar) {
+          const seekAudio = () => {
+            const dur = audio.duration || 255;
+            const target = (parseFloat(progressBar.value) / 100) * dur;
+            audio.currentTime = target;
+            if (curTimeDisplay) curTimeDisplay.textContent = formatTime(target);
+          };
+          progressBar.addEventListener('input', seekAudio);
+          progressBar.addEventListener('change', seekAudio);
+        }
+        // Volume Slider
+        if (volSlider) {
+          volSlider.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value) / 100;
+            audio.volume = val;
+            audio.muted = (val === 0);
+            if (muteIcon) muteIcon.textContent = val === 0 ? 'volume_off' : 'volume_up';
+            if (bottomVolFill) bottomVolFill.style.width = `${val * 100}%`;
+          });
+        }
+        // Mute Toggle
+        if (muteBtn) {
+          muteBtn.addEventListener('click', () => {
+            audio.muted = !audio.muted;
+            if (muteIcon) muteIcon.textContent = audio.muted ? 'volume_off' : 'volume_up';
+            if (volSlider && audio.muted) volSlider.value = 0;
+            else if (volSlider) volSlider.value = audio.volume * 100;
+          });
+        }
+        // Initial audio volume configuration
+        audio.volume = 0.85;
+        // Graceful Autoplay Handling on Page Load
+        window.addEventListener('load', () => {
+          audio.play().then(() => {
+            setVisualizerState(true);
+          }).catch(() => {
+            // Autoplay prevented by browser policies; keep player ready with visible Play button
+            setVisualizerState(false);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
